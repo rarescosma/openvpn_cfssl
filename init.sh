@@ -37,4 +37,4 @@ openvpn --genkey secret certs/ta.key
 
 # Make DH params
 echo "# Making DH params"
-openssl dhparam -dsaparam -out certs/dh.pem 2048
+openssl dhparam -dsaparam -out certs/dh.pem 4096
