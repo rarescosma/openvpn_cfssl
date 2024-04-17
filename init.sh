@@ -33,4 +33,8 @@ cfssl gencert -ca certs/ca.pem -ca-key certs/ca-key.pem \
 
 # Make ta.key
 echo "# Making ta.key"
-openvpn --genkey --secret certs/ta.key
+openvpn --genkey secret certs/ta.key
+
+# Make DH params
+echo "# Making DH params"
+openssl dhparam -dsaparam -out certs/dh.pem 2048
