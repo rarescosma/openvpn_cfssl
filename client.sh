@@ -27,7 +27,7 @@ export KEY="$(cat certs/${1}-key.pem)"
 cat > ovpn/$1.ovpn <<EOF
 client
 dev tun
-proto tcp
+proto udp
 
 remote ${REMOTE} ${PORT}
 

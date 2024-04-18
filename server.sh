@@ -12,7 +12,7 @@ export DH="$(cat certs/dh.pem)"
 
 cat > ovpn/server.ovpn <<EOF
 port ${PORT}
-proto tcp
+proto udp
 dev tun
 
 <ca>
